@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колледж кітапханасы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #1e3d59;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ff6e40;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #1e3d59;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff6e40;
+            padding-bottom: 5px;
+        }
+
+        /* Каталог кестесі */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1e3d59;
+            color: white;
+        }
+
+        /* Байланыс формасы */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background: #ff6e40;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background: #e55a2b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e3d59;
+            color: #fff;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Колледж Кітапханасы</h1>
+        <nav>
+            <a href="#home">Басты бет</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#contact">Байланыс</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1-студент бөлігі: Басты бет -->
+        <section id="home">
+            <h2>Қош келдіңіздер!</h2>
+            <p>Колледж кітапханасының ресми электронды порталы. Мұнда студенттер мен оқытушылар өздеріне қажетті оқулықтарды, әдістемелік құралдарды тауып, ақпарат ала алады.</p>
+        </section>
+
+        <!-- 2-студент бөлігі: Кітаптар каталогы -->
+        <section id="catalog">
+            <h2>Кітаптар каталогы</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Кітап атауы</th>
+                        <th>Авторы</th>
+                        <th>Жанры</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Абай жолы (1-том)</td>
+                        <td>Мұхтар Әуезов</td>
+                        <td>Роман</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Веб-технологиялар негіздері</td>
+                        <td>Қ. Ахметов</td>
+                        <td>Оқулық</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Қобланды батыр</td>
+                        <td>Қазақ эпосы</td>
+                        <td>Батырлар жыры</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3-студент бөлігі: Байланыс беті -->
+        <section id="contact">
+            <h2>Байланыс және тіркелу</h2>
+            <p><strong>Мекенжайымыз:</strong> Алматы қ., колледж ғимараты, 102-кабинет</p>
+            <p style="margin-bottom: 20px;"><strong>Электронды пошта:</strong> library@college.kz</p>
+            
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Хабарламаңыз сәтті жіберілді!');">
+                <input type="text" placeholder="Аты-жөніңіз" required>
+                <input type="email" placeholder="Электронды поштаңыз" required>
+                <textarea rows="4" placeholder="Сұрағыңыз немесе ұсынысыңыз..." required></textarea>
+                <button type="submit">Жіберу</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Алматы көпсалалы колледжі</p>
+    </footer>
+
+</body>
+</html>
